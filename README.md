@@ -8,6 +8,10 @@ But I came to realize that even after you unzip and have gfortran running right,
 
 So, my solution is to swing up a Linux virtual machine and use buildozer on there since the provided gfortran binary is compatible with Linux.
 
+## My machine system
+
+- MacOS Intel Sonoma 14.5
+
 ## NOTES
 
 - You don't need to care so much about the other files of this app
