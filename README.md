@@ -14,19 +14,22 @@ So, my solution is to swing up a Linux virtual machine and use buildozer on ther
 
 ## NOTES
 
-- You don't need to care so much about the other files of this app
-- The only important files are: Dockerfile, Makefile, Pipfile, buildozer.spec
+- Since the code for the app belongs to a friend of mine, so I cannot show them here
+- But the only important files are: Dockerfile, Makefile, Pipfile, buildozer.spec (so I keep them here)
 - Makefile might look a little messy, there are stuff that can be cleaned up -> Look at this Makefile and the one from the issue above to get the big picture
 
 ---
 
-- This repo Dockerfile will only pull this Github project by default, so you can run and see how it works
-- Later, you might want to use your own repo and change my Dockerfile to pull your repo
+- My Dockerfile will pull this Github repo by default, so you can then add your own Kivy app code and see how it works
+
+  - You can also fork this repo and add your own code too
+
 - You will also need to setup your enough dependencies like I did with pipenv if you use something else
 
 ---
 
-- I've only looked at targeting for Android. So for iOS, that might need some extra work. If I'm free, I'll look into it. But for now, if you have any questions, feel free to open an issue.
+- I've only looked at targeting for Android. So for iOS, that might need some extra work
+- If I'm free, I'll look into it. But for now, if you have any questions, feel free to open an issue
 
 # Use Dockerfile
 
