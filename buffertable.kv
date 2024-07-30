@@ -1,0 +1,24 @@
+<BufferTableScreen>:
+    FloatLayout:
+        Button:
+            id: go_back_button
+            text: "<< Go Back"
+            size_hint: None, None
+            height: 40
+            width: 150
+            pos_hint: {'x': 0, 'top': 1}
+            background_color: (1,1,1,1)
+            color: 39/255, 65/255, 245/255, 0.8
+            bold: True
+            background_normal: ''
+            on_press: root.manager.current = 'gen_bc_screen'
+        ScrollView:
+            id: scroll_view
+            size_hint: 0.8, 0.6  # adjust the size_hint to fit your needs
+            pos_hint: {'center_x': 0.5, 'center_y': 0.5}  # center the ScrollView
+            GridLayout:
+                id: table_layout
+                cols: 4
+                size_hint_y: None
+                row_default_height: dp(30)
+                row_force_default: True

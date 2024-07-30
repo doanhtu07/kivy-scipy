@@ -1,0 +1,161 @@
+<HomeScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        canvas.before:
+            Color:
+                rgba: 1, 1, 1, 1
+            Rectangle:
+                size: self.size
+                pos: self.pos
+
+        ScrollView:
+            BoxLayout:
+                orientation: 'vertical'
+                size_hint_y: None
+                height: self.minimum_height
+                padding: [20, 20, 20, 20]
+                spacing: 10
+
+                Label:
+                    text: 'Buffer Capacity App'
+                    font_size: '40sp'
+                    color: 0.1, 0.1, 0.1, 1  # Modern black color
+                    size_hint_y: None
+                    height: self.texture_size[1]
+                    bold: True
+                    halign: 'center'
+                    valign: 'middle'
+
+                Button:
+                    text: 'Upload Ingredient File'
+                    size_hint_y: None
+                    height: '40dp'
+                    on_press: root.show_file_chooser()
+                    background_normal: ''
+                    background_color: (0.05, 0.53, 0.11, 1)
+                    color: 1, 1, 1, 1
+                    bold: True   
+
+                BoxLayout:
+                    orientation: 'horizontal'
+                    size_hint_y: None
+                    height: '40dp'
+                    spacing: 10
+                    Label:
+                        text: 'Ingredient'
+                        font_size: '15sp'
+                        bold: True
+                        color: 0.1, 0.1, 0.1, 1  # Modern black color
+                        size_hint_x: 0.3
+
+                    TextInput:
+                        id: ingredient
+                        hint_text: 'Enter your Ingredient name'
+                        font_size: '15sp'
+                        size_hint_x: 0.5
+
+
+                BoxLayout:
+                    orientation: 'horizontal'
+                    size_hint_y: None
+                    height: '40dp'
+                    spacing: 10
+                    Label:
+                        text: 'Concentration in Titration (%)'
+                        font_size: '15sp'
+                        bold: True
+                        color: 0.1, 0.1, 0.1, 1  # Modern black color
+                        size_hint_x: 0.3
+                    TextInput:
+                        id: concentration_titration
+                        hint_text: 'Enter your Concentration in Titration (%)'
+                        input_filter: 'float'
+                        font_size: '15sp'
+                        size_hint_x: 0.5
+
+
+                BoxLayout:
+                    orientation: 'horizontal'
+                    size_hint_y: None
+                    height: '40dp'
+                    spacing: 10
+                    Label:
+                        text: 'Acid Concentration (N)'
+                        font_size: '15sp'
+                        bold: True
+                        color: 0.1, 0.1, 0.1, 1  # Modern black color
+                        size_hint_x: 0.3
+                    TextInput:
+                        id: acid_concentration
+                        hint_text: 'Enter your Acid Concentration (N)'
+                        input_filter: 'float'
+                        font_size: '15sp'
+                        size_hint_x: 0.5
+
+
+                BoxLayout:
+                    orientation: 'horizontal'
+                    size_hint_y: None
+                    height: '40dp'
+                    spacing: 10
+                    Label:
+                        text: 'Base Concentration (N)'
+                        font_size: '15sp'
+                        bold: True
+                        color: 0.1, 0.1, 0.1, 1  # Modern black color
+                        size_hint_x: 0.3
+                    TextInput:
+                        id: base_concentration
+                        hint_text: 'Enter your Base Concentration (N)'
+                        input_filter: 'float'
+                        font_size: '15sp'
+                        size_hint_x: 0.5
+
+
+                BoxLayout:
+                    orientation: 'horizontal'
+                    size_hint_y: None
+                    height: '40dp'
+                    spacing: 10
+                    Label:
+                        text: 'Volume Titrated (L)'
+                        font_size: '15sp'
+                        bold: True
+                        color: 0.1, 0.1, 0.1, 1  # Modern black color
+                        size_hint_x: 0.3
+                    TextInput:
+                        id: vol_titrated
+                        hint_text: 'Enter your Volume Titrated (L)'
+                        input_filter: 'float'
+                        font_size: '15sp'
+                        size_hint_x: 0.5
+
+
+                BoxLayout:
+                    orientation: 'horizontal'
+                    size_hint_y: None
+                    height: '40dp'
+                    spacing: 10
+                    Label:
+                        text: 'NaCl (%)'
+                        font_size: '15sp'
+                        bold: True
+                        color: 0.1, 0.1, 0.1, 1  # Modern black color
+                        size_hint_x: 0.3
+                    TextInput:
+                        id: nacl
+                        hint_text: 'Enter your NaCl (%)'
+                        input_filter: 'float'
+                        font_size: '15sp'
+                        size_hint_x: 0.5
+
+
+                Button:
+                    text: 'Go to Titration Graph'
+                    size_hint_y: None
+                    height: '40dp'
+                    on_press: root.go_to_titration_graph()
+                    background_normal: ''
+                    background_color: (0.05, 0.53, 0.11, 1)
+                    color: 1, 1, 1, 1
+                    bold: True

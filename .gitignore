@@ -1,0 +1,9 @@
+.cache/
+__pycache__/
+buffercapacity4-ios/
+build/
+dist/
+touchtracer-ios/
+.buildozer/
+bin/
+.DS_Store

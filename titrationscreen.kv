@@ -1,0 +1,104 @@
+<TitrationScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        canvas.before:
+            Color:
+                rgba: 1, 1, 1, 1
+            Rectangle:
+                size: self.size
+                pos: self.pos
+        ScrollView:
+            BoxLayout:
+                orientation: 'vertical'
+                size_hint_y: None
+                height: self.minimum_height
+                padding: [20, 20, 20, 20]
+                spacing: 10
+
+                Button:
+                    id: go_back_button
+                    text: "<< Go Back"
+                    size_hint: None, None
+                    height: '40dp'
+                    width: 150
+                    pos_hint: {'x': 0, 'top': 1}
+                    background_color: (1,1,1,1)
+                    color: 39/255, 65/255, 245/255, 0.8
+                    bold: True
+                    background_normal: ''
+                    on_press: root.go_back()
+
+                Label:
+                    text: 'Titration Screen'
+                    font_size: '40sp'
+                    color: 0.1, 0.1, 0.1, 1  # Modern black color
+                    size_hint_y: None
+                    height: self.texture_size[1]
+                    bold: True
+                    halign: 'center'
+                    valign: 'middle'
+
+            
+                Button:
+                    id: acid_button
+                    text: "Select Acid Titration File"
+                    background_color: (245/255, 39/255, 103/255, 0.8)
+                    color: (1, 1, 1, 1)
+                    size_hint_y: None
+                    height: '40dp'
+                    pos_hint: {'top': 0.9}
+                    bold: True
+                    background_normal: ''
+                    on_press: root.select_acid_file()
+
+                Button:
+                    id: base_button
+                    text: "Select Base Titration File"
+                    background_color: (39/255, 65/255, 245/255, 0.8)
+                    color: (1, 1, 1, 1)
+                    size_hint_y: None
+                    height: '40dp'
+                    pos_hint: {'top': 0.85}
+                    bold: True
+                    background_normal: ''
+                    on_press: root.select_base_file()
+
+                FloatLayout:
+                    id: file_info_layout
+                    size_hint: (1, None)
+                    size_hint_y: 0.1
+                    pos_hint: {'top': 0.6}
+
+                    Label:
+                        id: acid_file_label
+                        text: "Uploaded Acid Titration File: None"
+                        size_hint: (0.5, None)
+                        height: '40dp'
+                        font_size: '15sp'
+                        pos_hint: {'center_x': 0.25}
+
+                    Label:
+                        id: base_file_label
+                        text: "Uploaded Base Titration File: None"
+                        size_hint: (0.5, None)
+                        height: '40dp'
+                        font_size: '15sp'
+                        pos_hint: {'center_x': 0.75}
+
+                FloatLayout:
+                    id: chart_layout
+                    size_hint_y: None
+                    height: '400dp'
+                    pos_hint: {'center_x': 0.5, 'top': 0.5}
+
+                Button:
+                    id: navigate_button
+                    text: "Go to the BC Graph >>"
+                    size_hint_y: None
+                    height: '40dp'
+                    background_color: (1,1,1,1)
+                    color: 39/255, 65/255, 245/255, 0.8
+                    pos_hint: {'center_x': 0.5, 'top':0.2}
+                    bold: True
+                    background_normal: ''
+                    on_press: root.go_to_genBC_graph()

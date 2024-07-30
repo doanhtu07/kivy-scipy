@@ -1,0 +1,21 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+kivy = "*"
+"kivy-garden.graph" = "*"
+numpy = "*"
+pandas = "*"
+scipy = "*"
+chardet = "*"
+
+[dev-packages]
+buildozer = "*"
+pylint = "*"
+cython = "==0.29.33"
+setuptools = "*"
+
+[requires]
+python_version = "3.12"

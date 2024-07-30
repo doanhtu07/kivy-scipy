@@ -1,0 +1,7 @@
+# Legacy file now. I've setup Dockerfile to boot up the whole ubuntu image with required dependencies
+
+services:
+  ubuntu_service:
+    image: ubuntu:22.04
+    container_name: ubuntu_container
+    tty: true # docker run -t
