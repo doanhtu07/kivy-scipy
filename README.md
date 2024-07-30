@@ -18,9 +18,13 @@ So, my solution is to swing up a Linux virtual machine and use buildozer on ther
 - The only important files are: Dockerfile, Makefile, Pipfile, buildozer.spec
 - Makefile might look a little messy, there are stuff that can be cleaned up -> Look at this Makefile and the one from the issue above to get the big picture
 
+---
+
 - This repo Dockerfile will only pull this Github project by default, so you can run and see how it works
 - Later, you might want to use your own repo and change my Dockerfile to pull your repo
 - You will also need to setup your enough dependencies like I did with pipenv if you use something else
+
+---
 
 - I've only looked at targeting for Android. So for iOS, that might need some extra work. If I'm free, I'll look into it. But for now, if you have any questions, feel free to open an issue.
 
