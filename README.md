@@ -1,3 +1,25 @@
+# Overview
+
+This is an example Kivy project that uses scipy. I have built it with buildozer and docker ubuntu image.
+
+The hardest problem is to get scipy dependencies right. The solution can be found here: https://github.com/kivy/python-for-android/issues/2508
+
+But I came to realize that even after you unzip and have gfortran running right, if you're using a Mac, it's possible that you cannot execute the gfortran binary provided from the Github issue above.
+
+So, my solution is to swing up a Linux virtual machine and use buildozer on there since the provided gfortran binary is compatible with Linux.
+
+## NOTES
+
+- You don't need to care so much about the other files of this app
+- The only important files are: Dockerfile, Makefile, Pipfile, buildozer.spec
+- Makefile might look a little messy, there are stuff that can be cleaned up -> Look at this Makefile and the one from the issue above to get the big picture
+
+- This repo Dockerfile will only pull this Github project by default, so you can run and see how it works
+- Later, you might want to use your own repo and change my Dockerfile to pull your repo
+- You will also need to setup your enough dependencies like I did with pipenv if you use something else
+
+- I've only looked at targeting for Android. So for iOS, that might need some extra work. If I'm free, I'll look into it. But for now, if you have any questions, feel free to open an issue.
+
 # Use Dockerfile
 
 Run `docker build --no-cache -t buffercapacity4-docker .` to build image
