@@ -22,7 +22,7 @@ So, my solution is to swing up a Linux virtual machine and use buildozer on ther
 
 - My Dockerfile will pull this Github repo by default, so you can then add your own Kivy app code and see how it works
 
-  - You can also fork this repo and add your own code too
+  - You can also fork this repo and add your own code too, but you will need to adjust Dockerfile to pull from your fork
 
 - You will also need to setup your enough dependencies like I did with pipenv if you use something else
 
