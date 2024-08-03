@@ -20,16 +20,23 @@ So, my solution is to swing up a Linux virtual machine and use buildozer on ther
 
 ---
 
-- My Dockerfile will pull this Github repo by default, so you can then add your own Kivy app code and see how it works
+- My Dockerfile will clone your current directory (in which the Dockerfile locates) content into the docker image
 
-  - You can also fork this repo and add your own code too, but you will need to adjust Dockerfile to pull from your fork
+  - So you can add your own Kivy app code and build the image to see how it works
 
-- You will also need to setup your enough dependencies like I did with pipenv if you use something else
+  * You can also fork this repo and add your own code too for more freedom
+
+- If you don't use pipenv, you will also need to setup your own dependencies like I did with pipenv
 
 ---
 
-- I've only looked at targeting for Android. So for iOS, that might need some extra work
-- If I'm free, I'll look into it. But for now, if you have any questions, feel free to open an issue
+- I've only looked at targeting for Android
+
+  - So for iOS, that might need some extra work
+
+- If I'm free, I'll look into it
+
+  - But for now, if you have any questions, feel free to open an issue
 
 # Use Dockerfile
 
@@ -46,6 +53,16 @@ Run `source $(pipenv --venv)/bin/activate` to activate pipenv
 Run `make` to install toolchains for gfortran that supports scipy
 
 Run `buildozer android debug`
+
+## If you want to change your code
+
+- Right now, if you want to change your code, you can do it within the container
+
+- Or you can change locally on the host machine
+
+  - Then, you can cp the content of the host machine into the container through `docker cp <src> <dst>`
+
+- Generally, you can manually control every file you see in the container
 
 # After having apk file
 

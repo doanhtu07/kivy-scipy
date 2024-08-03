@@ -1,5 +1,9 @@
 FROM ubuntu:22.04
 
+# === Copy current project folder to docker ===
+
+ADD . /root/BufferCapacity4
+
 # === Start working at /root ===
 
 WORKDIR /root
